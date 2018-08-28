@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScriptsDBContext.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="creature_ai_scripts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="creature_id" Type="uint" Nullable="false" />
+          <Property Name="event_type" Type="utinyint" Nullable="false" />
+          <Property Name="event_inverse_phase_mask" Type="int" Nullable="false" />
+          <Property Name="event_chance" Type="uint" Nullable="false" />
+          <Property Name="event_flags" Type="uint" Nullable="false" />
+          <Property Name="event_param1" Type="int" Nullable="false" />
+          <Property Name="event_param2" Type="int" Nullable="false" />
+          <Property Name="event_param3" Type="int" Nullable="false" />
+          <Property Name="event_param4" Type="int" Nullable="false" />
+          <Property Name="action1_type" Type="utinyint" Nullable="false" />
+          <Property Name="action1_param1" Type="int" Nullable="false" />
+          <Property Name="action1_param2" Type="int" Nullable="false" />
+          <Property Name="action1_param3" Type="int" Nullable="false" />
+          <Property Name="action2_type" Type="utinyint" Nullable="false" />
+          <Property Name="action2_param1" Type="int" Nullable="false" />
+          <Property Name="action2_param2" Type="int" Nullable="false" />
+          <Property Name="action2_param3" Type="int" Nullable="false" />
+          <Property Name="action3_type" Type="utinyint" Nullable="false" />
+          <Property Name="action3_param1" Type="int" Nullable="false" />
+          <Property Name="action3_param2" Type="int" Nullable="false" />
+          <Property Name="action3_param3" Type="int" Nullable="false" />
+          <Property Name="comment" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creature_ai_summons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="position_x" Type="float" Nullable="false" />
+          <Property Name="position_y" Type="float" Nullable="false" />
+          <Property Name="position_z" Type="float" Nullable="false" />
+          <Property Name="orientation" Type="float" Nullable="false" />
+          <Property Name="spawntimesecs" Type="uint" Nullable="false" />
+          <Property Name="comment" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creature_ai_texts">
+          <Key>
+            <PropertyRef Name="entry" />
+          </Key>
+          <Property Name="entry" Type="mediumint" Nullable="false" />
+          <Property Name="content_default" Type="text" Nullable="false" />
+          <Property Name="content_loc1" Type="text" />
+          <Property Name="content_loc2" Type="text" />
+          <Property Name="content_loc3" Type="text" />
+          <Property Name="content_loc4" Type="text" />
+          <Property Name="content_loc5" Type="text" />
+          <Property Name="content_loc6" Type="text" />
+          <Property Name="content_loc7" Type="text" />
+          <Property Name="content_loc8" Type="text" />
+          <Property Name="sound" Type="umediumint" Nullable="false" />
+          <Property Name="type" Type="utinyint" Nullable="false" />
+          <Property Name="language" Type="utinyint" Nullable="false" />
+          <Property Name="emote" Type="usmallint" Nullable="false" />
+          <Property Name="comment" Type="text" />
+        </EntityType>
+        <EntityContainer Name="ScriptsDBContextStoreContainer">
+          <EntitySet Name="creature_ai_scripts" EntityType="Self.creature_ai_scripts" Schema="mangos" store:Type="Tables" />
+          <EntitySet Name="creature_ai_summons" EntityType="Self.creature_ai_summons" Schema="mangos" store:Type="Tables" />
+          <EntitySet Name="creature_ai_texts" EntityType="Self.creature_ai_texts" Schema="mangos" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScriptsDBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="creature_ai_scripts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="creature_id" Type="Int64" Nullable="false" />
+          <Property Name="event_type" Type="Byte" Nullable="false" />
+          <Property Name="event_inverse_phase_mask" Type="Int32" Nullable="false" />
+          <Property Name="event_chance" Type="Int64" Nullable="false" />
+          <Property Name="event_flags" Type="Int64" Nullable="false" />
+          <Property Name="event_param1" Type="Int32" Nullable="false" />
+          <Property Name="event_param2" Type="Int32" Nullable="false" />
+          <Property Name="event_param3" Type="Int32" Nullable="false" />
+          <Property Name="event_param4" Type="Int32" Nullable="false" />
+          <Property Name="action1_type" Type="Byte" Nullable="false" />
+          <Property Name="action1_param1" Type="Int32" Nullable="false" />
+          <Property Name="action1_param2" Type="Int32" Nullable="false" />
+          <Property Name="action1_param3" Type="Int32" Nullable="false" />
+          <Property Name="action2_type" Type="Byte" Nullable="false" />
+          <Property Name="action2_param1" Type="Int32" Nullable="false" />
+          <Property Name="action2_param2" Type="Int32" Nullable="false" />
+          <Property Name="action2_param3" Type="Int32" Nullable="false" />
+          <Property Name="action3_type" Type="Byte" Nullable="false" />
+          <Property Name="action3_param1" Type="Int32" Nullable="false" />
+          <Property Name="action3_param2" Type="Int32" Nullable="false" />
+          <Property Name="action3_param3" Type="Int32" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creature_ai_summons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position_x" Type="Single" Nullable="false" />
+          <Property Name="position_y" Type="Single" Nullable="false" />
+          <Property Name="position_z" Type="Single" Nullable="false" />
+          <Property Name="orientation" Type="Single" Nullable="false" />
+          <Property Name="spawntimesecs" Type="Int64" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="creature_ai_texts">
+          <Key>
+            <PropertyRef Name="entry" />
+          </Key>
+          <Property Name="entry" Type="Int32" Nullable="false" />
+          <Property Name="content_default" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="content_loc1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc2" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc3" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc4" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc5" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc6" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc7" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="content_loc8" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="sound" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="language" Type="Byte" Nullable="false" />
+          <Property Name="emote" Type="Int32" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ScriptsDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="creature_ai_scripts" EntityType="Self.creature_ai_scripts" />
+          <EntitySet Name="creature_ai_summons" EntityType="Self.creature_ai_summons" />
+          <EntitySet Name="creature_ai_texts" EntityType="Self.creature_ai_texts" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ScriptsDBContextStoreContainer" CdmEntityContainer="ScriptsDB">
+          <EntitySetMapping Name="creature_ai_scripts">
+            <EntityTypeMapping TypeName="ScriptsDBContext.creature_ai_scripts">
+              <MappingFragment StoreEntitySet="creature_ai_scripts">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="creature_id" ColumnName="creature_id" />
+                <ScalarProperty Name="event_type" ColumnName="event_type" />
+                <ScalarProperty Name="event_inverse_phase_mask" ColumnName="event_inverse_phase_mask" />
+                <ScalarProperty Name="event_chance" ColumnName="event_chance" />
+                <ScalarProperty Name="event_flags" ColumnName="event_flags" />
+                <ScalarProperty Name="event_param1" ColumnName="event_param1" />
+                <ScalarProperty Name="event_param2" ColumnName="event_param2" />
+                <ScalarProperty Name="event_param3" ColumnName="event_param3" />
+                <ScalarProperty Name="event_param4" ColumnName="event_param4" />
+                <ScalarProperty Name="action1_type" ColumnName="action1_type" />
+                <ScalarProperty Name="action1_param1" ColumnName="action1_param1" />
+                <ScalarProperty Name="action1_param2" ColumnName="action1_param2" />
+                <ScalarProperty Name="action1_param3" ColumnName="action1_param3" />
+                <ScalarProperty Name="action2_type" ColumnName="action2_type" />
+                <ScalarProperty Name="action2_param1" ColumnName="action2_param1" />
+                <ScalarProperty Name="action2_param2" ColumnName="action2_param2" />
+                <ScalarProperty Name="action2_param3" ColumnName="action2_param3" />
+                <ScalarProperty Name="action3_type" ColumnName="action3_type" />
+                <ScalarProperty Name="action3_param1" ColumnName="action3_param1" />
+                <ScalarProperty Name="action3_param2" ColumnName="action3_param2" />
+                <ScalarProperty Name="action3_param3" ColumnName="action3_param3" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="creature_ai_summons">
+            <EntityTypeMapping TypeName="ScriptsDBContext.creature_ai_summons">
+              <MappingFragment StoreEntitySet="creature_ai_summons">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="position_x" ColumnName="position_x" />
+                <ScalarProperty Name="position_y" ColumnName="position_y" />
+                <ScalarProperty Name="position_z" ColumnName="position_z" />
+                <ScalarProperty Name="orientation" ColumnName="orientation" />
+                <ScalarProperty Name="spawntimesecs" ColumnName="spawntimesecs" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="creature_ai_texts">
+            <EntityTypeMapping TypeName="ScriptsDBContext.creature_ai_texts">
+              <MappingFragment StoreEntitySet="creature_ai_texts">
+                <ScalarProperty Name="entry" ColumnName="entry" />
+                <ScalarProperty Name="content_default" ColumnName="content_default" />
+                <ScalarProperty Name="content_loc1" ColumnName="content_loc1" />
+                <ScalarProperty Name="content_loc2" ColumnName="content_loc2" />
+                <ScalarProperty Name="content_loc3" ColumnName="content_loc3" />
+                <ScalarProperty Name="content_loc4" ColumnName="content_loc4" />
+                <ScalarProperty Name="content_loc5" ColumnName="content_loc5" />
+                <ScalarProperty Name="content_loc6" ColumnName="content_loc6" />
+                <ScalarProperty Name="content_loc7" ColumnName="content_loc7" />
+                <ScalarProperty Name="content_loc8" ColumnName="content_loc8" />
+                <ScalarProperty Name="sound" ColumnName="sound" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="emote" ColumnName="emote" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScriptsDBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="creature_ai_scripts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="creature_id" Type="Int64" Nullable="false" />
+    <Property Name="event_type" Type="Byte" Nullable="false" />
+    <Property Name="event_inverse_phase_mask" Type="Int32" Nullable="false" />
+    <Property Name="event_chance" Type="Int64" Nullable="false" />
+    <Property Name="event_flags" Type="Int64" Nullable="false" />
+    <Property Name="event_param1" Type="Int32" Nullable="false" />
+    <Property Name="event_param2" Type="Int32" Nullable="false" />
+    <Property Name="event_param3" Type="Int32" Nullable="false" />
+    <Property Name="event_param4" Type="Int32" Nullable="false" />
+    <Property Name="action1_type" Type="Byte" Nullable="false" />
+    <Property Name="action1_param1" Type="Int32" Nullable="false" />
+    <Property Name="action1_param2" Type="Int32" Nullable="false" />
+    <Property Name="action1_param3" Type="Int32" Nullable="false" />
+    <Property Name="action2_type" Type="Byte" Nullable="false" />
+    <Property Name="action2_param1" Type="Int32" Nullable="false" />
+    <Property Name="action2_param2" Type="Int32" Nullable="false" />
+    <Property Name="action2_param3" Type="Int32" Nullable="false" />
+    <Property Name="action3_type" Type="Byte" Nullable="false" />
+    <Property Name="action3_param1" Type="Int32" Nullable="false" />
+    <Property Name="action3_param2" Type="Int32" Nullable="false" />
+    <Property Name="action3_param3" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="creature_ai_summons">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="position_x" Type="Single" Nullable="false" />
+    <Property Name="position_y" Type="Single" Nullable="false" />
+    <Property Name="position_z" Type="Single" Nullable="false" />
+    <Property Name="orientation" Type="Single" Nullable="false" />
+    <Property Name="spawntimesecs" Type="Int64" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="creature_ai_texts">
+    <Key>
+      <PropertyRef Name="entry" />
+    </Key>
+    <Property Name="entry" Type="Int32" Nullable="false" />
+    <Property Name="content_default" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="content_loc1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc2" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc3" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc4" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc5" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc6" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc7" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="content_loc8" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="sound" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="Byte" Nullable="false" />
+    <Property Name="language" Type="Byte" Nullable="false" />
+    <Property Name="emote" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ScriptsDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="creature_ai_scripts" EntityType="Self.creature_ai_scripts" />
+    <EntitySet Name="creature_ai_summons" EntityType="Self.creature_ai_summons" />
+    <EntitySet Name="creature_ai_texts" EntityType="Self.creature_ai_texts" />
+  </EntityContainer>
+</Schema>
