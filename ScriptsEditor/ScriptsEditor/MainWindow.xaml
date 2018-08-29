@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="CMangos - SE" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Image Source="/Resources/kirintor.jpg" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="634,29,60,0"></Image>
+        <Image Source="/Resources/kirintor.jpg" Height="100" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,29,60,0"></Image>
         <Label Content="CMangos SE" HorizontalAlignment="Center" Margin="80,29,546,0" VerticalAlignment="Top" FontSize="26" />
         <Label Content="Welcome to CMangos Script Editor." HorizontalAlignment="Center" Margin="85,65,515,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Height="255" Margin="90,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"><Run Text="In order to create a script for a new Entry you must first connect to the database which you want to edit."/><LineBreak/><Run/><LineBreak/><Run Text="Server: The IP where the database resides. For example: 127.0.0.1 for localhost."/><LineBreak/><Run/><LineBreak/><Run Text="Port: The port defined when installed your MySQL server. Default port is 3306"/><Run Text="."/><LineBreak/><Run/><LineBreak/><Run Text="Username and password: The connection credentials to query the database."/></TextBlock>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="394,108,394,0" Height="210">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,125,0,0" Height="190">
             <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black" />
         </StackPanel>
         <Grid HorizontalAlignment="Right" Margin="0,145,90,0" Height="Auto" VerticalAlignment="Top">
