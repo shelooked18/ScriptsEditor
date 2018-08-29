@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScriptsEditor"
         mc:Ignorable="d"
-        Title="Acid_Editor" Height="450" Width="900" ResizeMode="NoResize">
+        Title="Acid_Editor" Height="550" Width="900" ResizeMode="NoResize">
     <Grid>
         <!-- Creature Information and preferences -->
         <DockPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Height="25">
@@ -56,8 +56,8 @@
             </Menu>
         </DockPanel>
         <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96" PreviewTextInput="TextBox_PreviewTextInput"/>
-        <Button x:Name="load" Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox Name="creature_id" HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <Button x:Name="load" Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25" Click="load_Click"/>
         <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="35" Height="25" />
         <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Height="25"/>
         <ComboBox Height="25" Width="210" Margin="20,115,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -246,10 +246,8 @@
         </Grid>
         <Label Content="Event Progress:" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"></Label>
         <StatusBar HorizontalAlignment="Left" Height="20" Margin="120,215,0,0" VerticalAlignment="Top" Width="150"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="190" Width="884" VerticalAlignment="Bottom">
-            <DataGrid Name="Event_Grid">
-
-            </DataGrid>
-        </ScrollViewer>
+        <DataGrid Name="Event_Grid" Height="230" Width="884" VerticalAlignment="Bottom" AlternatingRowBackground="LightGray" 
+                      BorderBrush="Gray" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False" 
+                      HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" SelectionMode="Single" GridLinesVisibility="None"/>
     </Grid>
 </Window>

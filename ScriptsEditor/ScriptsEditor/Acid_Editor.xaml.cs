@@ -20,12 +20,12 @@ namespace ScriptsEditor
     /// </summary>
     public partial class Acid_Editor : Window
     {
+        private static ScriptsDB.ScriptsDB mangosDB;
+
         public Acid_Editor()
         {
             InitializeComponent();
-            ScriptsDB.ScriptsDB mangos = new ScriptsDB.ScriptsDB();
-            var list = mangos.creature_ai_scripts.Where(x=> x.id < 5000).ToList();
-            Event_Grid.ItemsSource = list;
+            mangosDB = new ScriptsDB.ScriptsDB();
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -55,6 +55,13 @@ namespace ScriptsEditor
             {
                 Console.Write(ex.ToString());
             }
+        }
+
+        private void load_Click(object sender, RoutedEventArgs e)
+        {
+            int SearchCreatureId = int.Parse(creature_id.Text);
+            var list = mangosDB.creature_ai_scripts.Where(x => x.creature_id == SearchCreatureId).ToList();
+            Event_Grid.ItemsSource = list;
         }
     }
 }
