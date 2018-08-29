@@ -71,7 +71,7 @@ namespace ScriptsEditor
                         AE.Show();
                         foreach (Window window in System.Windows.Application.Current.Windows)
                         {
-                            if (window.Title == "CMangos - Acid editor")
+                            if (window.Title == "CMangos - SE")
                                 window.Close();
                         }
                     }

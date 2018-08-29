@@ -157,6 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\mage.png" />
+    <Resource Include="Resources\rogue tier.png" />
+    <Resource Include="Resources\Ночной_эльф.png" />
+    <Resource Include="Resources\kirintor.jpg" />
     <Content Include="ScriptsDB\ScriptsDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ScriptsDB.edmx</DependentUpon>
@@ -172,7 +176,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="Styles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
