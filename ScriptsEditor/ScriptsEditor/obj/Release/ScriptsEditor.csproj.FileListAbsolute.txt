@@ -25,3 +25,4 @@ C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\R
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\ScriptsEditor.exe
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\ScriptsEditor.pdb
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\ScriptsEditor.csprojAssemblyReference.cache
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\App.baml
