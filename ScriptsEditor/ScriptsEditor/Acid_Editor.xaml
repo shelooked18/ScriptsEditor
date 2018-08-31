@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         xmlns:local="clr-namespace:ScriptsEditor"
         mc:Ignorable="d"
         Title="Acid_Editor" Height="550" Width="1000" ResizeMode="NoResize"
@@ -198,7 +199,10 @@
         <Label Content="Comment:" Margin="0,0,180,60" Width="70" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
         <TextBox Margin="397,218,322,277" Width="175" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
         <!-- Parameters -->
-        <TabControl Width="305" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,0">
+        <dragablz:TabablzControl Width="325" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,26,20,0" FixedHeaderCount="4" >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController />
+            </dragablz:TabablzControl.InterTabController>
             <TabItem Header="Event">
                 <Grid>
                     <!-- 5 Rows -->
@@ -293,7 +297,8 @@
                     <TextBox Grid.Row="2" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action3_param3">0</TextBox>
                 </Grid>
             </TabItem>
-        </TabControl>
+        </dragablz:TabablzControl>
+        
         <Grid Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,210,20,263">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>

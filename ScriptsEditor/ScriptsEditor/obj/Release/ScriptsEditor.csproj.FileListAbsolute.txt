@@ -30,3 +30,7 @@ C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\R
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.dll
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.pdb
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\Dragablz.dll
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\Dragablz.pdb
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\Dragablz.xml
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignColors.pdb
