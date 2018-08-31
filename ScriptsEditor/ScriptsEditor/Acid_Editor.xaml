@@ -146,7 +146,7 @@
         </Grid>
 
         <!-- Script Information -->
-        <Grid VerticalAlignment="Top" Width="Auto" Height="200" HorizontalAlignment="Center" Margin="5,30,0,0">
+        <Grid VerticalAlignment="Top" Width="280" Height="200" HorizontalAlignment="Center" Margin="343,32,371,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -176,7 +176,7 @@
             </ComboBox>
             <TextBox Grid.Row="3" Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="2" LostFocus="TextBox_LostFocus" Name="Action">0</TextBox>
         </Grid>
-        <Grid Width="250" Margin="0,0,0,170" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Width="250" Margin="343,134,401,307" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -196,8 +196,8 @@
             <Label Content="Flags:" Grid.Row="1" Grid.Column="2" Margin="0,10,0,0"></Label>
             <TextBox Grid.Row="1" Grid.Column="3" Width="50" HorizontalAlignment="Left" Margin="0,10,0,0" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="Flags">0</TextBox>
         </Grid>
-        <Label Content="Comment:" Margin="0,0,180,60" Width="70" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-        <TextBox Margin="397,218,322,277" Width="175" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
+        <Label Content="Comment:" Margin="335,210,576,267" Width="70" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <TextBox Margin="413,210,396,267" Width="175" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
         <!-- Parameters -->
         <dragablz:TabablzControl Width="325" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,26,20,0" FixedHeaderCount="4" >
             <dragablz:TabablzControl.InterTabController>
@@ -298,7 +298,7 @@
                 </Grid>
             </TabItem>
         </dragablz:TabablzControl>
-        
+
         <Grid Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,210,20,263">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
