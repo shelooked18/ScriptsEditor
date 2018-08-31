@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScriptsEditor"
         mc:Ignorable="d"
-        Title="Acid_Editor" Height="550" Width="900" ResizeMode="NoResize">
+        Title="Acid_Editor" Height="550" Width="1000" ResizeMode="NoResize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
     <Window.Resources>
         <Style x:Key="Event_grid" TargetType="DataGrid">
             <!-- Make the border and grid lines a little less imposing -->
@@ -104,23 +112,18 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
+        <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="17,31,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
         <TextBox Name="creature_id" HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96" PreviewTextInput="TextBox_PreviewTextInput"/>
-        <Button x:Name="load" Content="Load" Style="{DynamicResource Button}" Width="63" BorderThickness="0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25" Click="load_Click">
+        <Button x:Name="load" Content="Load" Width="63" BorderThickness="0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="207,58,0,0" VerticalAlignment="Top" Height="25" Click="load_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="..." Style="{DynamicResource Button}" BorderThickness="0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="35" Height="25" >
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
+        <Button Content="Search" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="Auto" Height="25">
         </Button>
-        <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Height="25"/>
+        <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,90,0,0" Height="25"/>
         <ComboBox Height="25" Width="210" Margin="20,115,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <ComboBoxItem IsSelected="True">Creature_ai_scripts</ComboBoxItem>
             <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
@@ -193,9 +196,9 @@
             <TextBox Grid.Row="1" Grid.Column="3" Width="50" HorizontalAlignment="Left" Margin="0,10,0,0" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="Flags">0</TextBox>
         </Grid>
         <Label Content="Comment:" Margin="0,0,180,60" Width="70" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-        <TextBox Margin="75,0,20,55" Width="175" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
+        <TextBox Margin="397,218,322,277" Width="175" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
         <!-- Parameters -->
-        <TabControl Width="285" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,10,0">
+        <TabControl Width="305" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,0">
             <TabItem Header="Event">
                 <Grid>
                     <!-- 5 Rows -->
@@ -291,44 +294,25 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Grid Height="40" Width="295" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,45">
+        <Grid Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,210,20,263">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="70"></ColumnDefinition>
-                <ColumnDefinition Width="125"></ColumnDefinition>
-                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Content="New event" BorderThickness="0" Style="{DynamicResource  Button}">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            <Button Grid.Row="0" Grid.Column="1" Content="Generate comments" Margin="10,0,0,0" BorderThickness="0" Style="{DynamicResource Button}">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            <Button Grid.Row="0" Grid.Column="2" Content="Generate SQL" Margin="10,0,0,0" BorderThickness="0" Style="{DynamicResource Button}">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+            <Button Grid.Row="0" Grid.Column="0" Content="New" Width="Auto"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="Auto Comments" Margin="5,0,0,0" BorderThickness="0" />
+            <Button Grid.Row="0" Grid.Column="2" Content="Execute SQL" Margin="5,0,0,0" BorderThickness="0" />
         </Grid>
         <Label Content="Event Progress:" HorizontalAlignment="Left" Margin="20,218,0,0" VerticalAlignment="Top"></Label>
         <StatusBar HorizontalAlignment="Left" Height="20" Margin="120,222,0,0" VerticalAlignment="Top" Width="150"/>
-        <DataGrid Name="Event_Grid" Height="260" Width="884" VerticalAlignment="Bottom" AlternatingRowBackground="LightGray" Style="{DynamicResource Event_grid}"
-                      BorderBrush="Gray" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False" 
+        <DataGrid Name="Event_Grid" Height="250" Width="Auto" VerticalAlignment="Bottom" 
+                      IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False" 
                       HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" SelectionMode="Single" GridLinesVisibility="None">
-
         </DataGrid>
-        
+
     </Grid>
 </Window>

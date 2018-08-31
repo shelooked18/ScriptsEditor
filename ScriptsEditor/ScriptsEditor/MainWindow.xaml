@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScriptsEditor"
         mc:Ignorable="d"
-        Title="CMangos - SE" Height="450" Width="800" ResizeMode="NoResize">
+        Title="CMangos - SE" Height="450" Width="800" ResizeMode="NoResize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <Image Source="/Resources/kirintor.jpg" Height="100" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,29,60,0"></Image>
         <Label Content="CMangos SE" HorizontalAlignment="Center" Margin="80,29,546,0" VerticalAlignment="Top" FontSize="26" />
@@ -36,6 +44,6 @@
             <PasswordBox Name="Password" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Width="200" Height="23" Margin="0,0,0,0" PasswordChar="*" VerticalAlignment="Center"/>
         </Grid>
         <CheckBox Name="RememberMe" Content="Remember credentials" HorizontalAlignment="Right" Margin="0,263,218,0" VerticalAlignment="Top"/>
-        <Button BorderThickness="0" Height="30" Width="70" Content="Connect" Margin="0,288,90,0" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Connect" />
+        <Button BorderThickness="0" Height="30" Width="100" Content="Connect" Margin="0,288,90,0" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Connect" />
     </Grid>
 </Window>

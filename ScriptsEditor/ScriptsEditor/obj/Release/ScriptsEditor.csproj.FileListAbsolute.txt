@@ -26,3 +26,7 @@ C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\R
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\ScriptsEditor.pdb
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\ScriptsEditor.csprojAssemblyReference.cache
 C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\obj\Release\App.baml
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignColors.dll
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\claudio.costa\Documents\ScriptsEditor\ScriptsEditor\ScriptsEditor\bin\Release\MaterialDesignThemes.Wpf.xml
